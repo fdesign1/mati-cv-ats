@@ -31,7 +31,7 @@ const experience = [
     company: "Cognizant",
     dates: "2020 – Apr 2021",
     bullets: [
-      "Used Excel, SAP, Azure Portal, Power BI and company tools to support operations for Microsoft.",
+      "Used Excel, SAP, Azure Portal, and company tools to support operations for Microsoft.",
       "Managed payment transactions while ensuring accuracy and compliance with internal procedures.",
       "Updated internal databases, responded to queries and resolved issues to maintain data integrity and operational efficiency.",
     ],
@@ -62,7 +62,7 @@ const skillGroups = [
   { label: "API & Integration:", value: "REST APIs, API Integration, Postman, SwaggerHub, Stoplight" },
   { label: "Technical Support:", value: "Technical Troubleshooting, Debugging, Technical Investigations, Problem Solving, Customer Support, Bug Identification" },
   { label: "Cloud & Systems:", value: "Azure, Linux, Bash Scripting, PowerShell, Docker & Kubernetes Fundamentals" },
-  { label: "Databases & Data:", value: "SQL, Data Analysis, Power BI, Microsoft Excel" },
+  { label: "Databases & Data:", value: "SQL, Data Analysis, Microsoft Excel" },
   { label: "Development:", value: "JavaScript, React, Node.js, HTML5, CSS, Bootstrap, Tailwind, WordPress" },
   { label: "Tools:", value: "Salesforce, Git, GitHub, Jira, Confluence, Visual Studio, Slack, Microsoft Teams, Google Workspace" },
 ];
@@ -80,7 +80,11 @@ const education = [
     title: "Security Training",
     detail: "Endpoint Protection, Encryption.",
   },
-];
+  {
+       title: "Linux Training",
+       detail: "LFS101, LFS207",
+       },
+  ];
 
 function App() {
   const { t } = useTranslation();
@@ -90,7 +94,7 @@ function App() {
       <header className="cv-header">
         <h1>MATIAS FERRERAS</h1>
         <p className="cv-role">Technical Support Engineer | API &amp; Integration Support | SaaS</p>
-        <p className="cv-contact">Wroclaw, Poland | +48 515 465 342 | ferrerasmatias@outlook.com</p>
+        <p className="cv-contact">Wroclaw, Poland | EU Citizen | +48 515 465 342 | ferrerasmatias@outlook.com</p>
       </header>
 
       <hr className="cv-rule" />
@@ -130,7 +134,7 @@ function App() {
           <h2>EDUCATION &amp; TRAINING</h2>
           {education.map(({ title, detail }) => (
             <p key={title} className="cv-education-item">
-              <strong>{title}</strong> — {detail}
+              <strong>{title}</strong> - {detail}
             </p>
           ))}
         </section>
